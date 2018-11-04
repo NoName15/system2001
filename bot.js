@@ -4,7 +4,7 @@ const prefix = ">";
 const moment = require('moment');
 
 client.on('ready', () => {
-     client.user.setActivity(" >help | >inv",{type: 'WATCHING'})
+     client.user.setActivity(" >help ",{type: 'WATCHING'})
 
 });
 
@@ -283,7 +283,7 @@ if(!true) return;
 
 
 client.on('message', function(message) {
-	const myID = "337309575864647680";
+	const myID = "480407581085532180";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -511,7 +511,7 @@ client.on('message', message => {
     });
 
  client.on('guildCreate', guild => {
-  client.channels.get("room id new ").send(`**تم اضافة البوت في سيرفر جديد مبروكك
+  client.channels.get("508253193633923089").send(`**تم اضافة البوت في سيرفر جديد مبروكك
 اسم السيرفر: __${guild.name}__
 اونر السيرفر: __${guild.owner}__**`)
 }); 
@@ -665,7 +665,7 @@ client.on('message', message => {
 	
 	
 	client.on('message', function(msg) {
-if(msg.content.startsWith ('>what')) {
+if(msg.content.startsWith ('>info/1')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
@@ -719,17 +719,7 @@ client.on('message', message => {
 }
 });
 
-client.on('message', message => {
-        if (message.content === ">inv") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
-        .setTitle(`:small_orange_diamond: اضغط هنا `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=470322680172904460&permissions=8&scope=bot`)
-        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
-     message.channel.sendEmbed(embed);
-       }
-   });
+
 
 
 client.on('message', message => {
