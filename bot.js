@@ -13,7 +13,7 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
       
-                    Official-Bot Commands
+                    Legends United-Bot Commands
 Please Choose:
 
              
@@ -334,9 +334,9 @@ client.on('message', function(message) {
 });
 
 client.on('message', msg => {
-  const DiscordLink = [".net", ".tk", ".com"];
+  const DiscordLink = [".net", ".tk", ".com", ".gg", "https://"];
   if( DiscordLink.some(word => msg.content.includes(word)) ) {
-    msg.reply(`**حبي ممنوع نشر اي روابط:joy: **`)
+    msg.reply(`**حبي ممنوع نشر اي روابط:joy: ** <@477108070409830424> بند امه`)
     msg.delete();
 
 }
@@ -344,14 +344,14 @@ client.on('message', msg => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('.com', '.net', '.tk')){
+    if(message.content.includes('.net', '.tk', '.com', '.gg', 'https://')){
         message.delete()
-    return message.reply(`**حبي ممنوع نشر اي روابط:joy: **`)
+    return message.reply(`**حبي ممنوع نشر اي روابط:joy: ** <@477108070409830424> بند امه`)
     }
 });
 
 client.on('message', (message)=>{
-        if (message.content.startsWith(`+embed`)) {
+        if (message.content.startsWith(`>embed`)) {
                 var embed = new Discord.RichEmbed()
                 .setAuthor(client.user.username,client.user.avatarURL)
                 .setTitle("Message By " + message.author.tag)
