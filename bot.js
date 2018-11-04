@@ -3,10 +3,7 @@ const client = new Discord.Client();
 const prefix = ">";
 const moment = require('moment');
 
-client.on('ready', () => {
-     client.user.setActivity(" >help ",{type: 'WATCHING'})
 
-});
 
 
 client.on("message", message => {
