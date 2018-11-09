@@ -69,7 +69,7 @@ ${prefix}warn ⇏ لتحضير شخص ما
 .addField(' الاعضاء👥 ',` [${client.users.size}] `)
 .addField('الرومات📚 ',`[${client.channels.size}]`) 
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`Official Team`)
+.addField('مصمم  + صاحب البوت ',`RO7`)
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
@@ -334,7 +334,7 @@ client.on('message', function(message) {
 });
 
 client.on('message', msg => {
-  const DiscordLink = [".net", ".tk", ".com", ".gg", "https://"];
+  const DiscordLink = [".net", ".tk", ".com",  "https://"];
   if( DiscordLink.some(word => msg.content.includes(word)) ) {
     msg.reply(`**حبي ممنوع نشر اي روابط:joy: ** <@477108070409830424> بند امه`)
     msg.delete();
