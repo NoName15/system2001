@@ -333,22 +333,7 @@ client.on('message', function(message) {
     }
 });
 
-client.on('message', msg => {
-  const DiscordLink = [".net", ".tk", ".com",  "https://"];
-  if( DiscordLink.some(word => msg.content.includes(word)) ) {
-    msg.reply(`**حبي ممنوع نشر اي روابط:joy: ** <@477108070409830424> بند امه`)
-    msg.delete();
 
-}
-})
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('.net', '.tk', '.com','https://')){
-        message.delete()
-    return message.reply(`**حبي ممنوع نشر اي روابط:joy: ** <@477108070409830424> بند امه`)
-    }
-});
 
 client.on('message', (message)=>{
         if (message.content.startsWith(`>embed`)) {
