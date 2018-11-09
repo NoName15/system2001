@@ -11,7 +11,7 @@ client.on('message',   ro7 =>{ // Edited by [ @RO7#9078 ]
                               if(ro7.content.startsWith(prefix + 'sar7')) {
                               if(ro7.channel.type === "dm"){
 if(!args) return  ro7.channel.send("`حط بعد الايدي الرساله وانا برسلها :)`");
-if(!men) return  eyad.channel.send("`حط ايدي الشخص \n او يقد يكون الشخص ليس موجود في سرفرات مشتركه بيني وبينة`");
+if(!men) return  ro7.channel.send("`حط ايدي الشخص \n او يقد يكون الشخص ليس موجود في سرفرات مشتركه بيني وبينة`");
                       var currentTime = new Date(),
             Year = currentTime.getFullYear(),
             Month = currentTime.getMonth() + 1,
