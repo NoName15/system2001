@@ -3,6 +3,55 @@ const client = new Discord.Client();
 const prefix = ">";
 const moment = require('moment');
 
+client.on('message',   ro7 =>{ // Edited by [ @RO7#9078 ]
+
+    var  args = ro7.content.split(" ").slice(2).join(" ")
+    var men = ro7.mentions.users.first()|| client.users.get(ro7.content.split(' ')[1])
+    var  mas = ro7.author
+                              if(ro7.content.startsWith(prefix + 'sar7')) {
+                              if(ro7.channel.type === "dm"){
+if(!args) return  ro7.channel.send("`حط بعد الايدي الرساله وانا برسلها :)`");
+if(!men) return  eyad.channel.send("`حط ايدي الشخص \n او يقد يكون الشخص ليس موجود في سرفرات مشتركه بيني وبينة`");
+                      var currentTime = new Date(),
+            Year = currentTime.getFullYear(),
+            Month = currentTime.getMonth() + 1,
+            Day = currentTime.getDate();
+     var ro7andr3d = new Discord.RichEmbed()
+     .setAuthor(ro7.author.username , eyad.author.avatarURL)
+     .setThumbnail(men.avatarURL)
+     .setDescription(`هل انت موافق لارسال الرساله \n موافق = ✅ \nرفض = ❌ \n**محتوي الرسالة : ${args}**`)
+     .setTimestamp()
+     .setFooter('لديك 60 ثانية للاختيار')
+     ro7.channel.send(ro7andr3d).then(message => {
+ message.react('✅').then(r=>{
+ message.react('❌').then(r=>{
+    var kk = (reaction, user) => reaction.emoji.name === '✅' && user.id === ro7.author.id;
+    var nn = (reaction, user) => reaction.emoji.name === '❌' && user.id === ro7.author.id;
+    var kkk = message.createReactionCollector(kk, { time: 60000 });
+    var nnn = message.createReactionCollector(nn, { time: 60000 });
+kkk.on("collect", r => {
+          const embed = new Discord.RichEmbed()
+               .setThumbnail("https://cdn.discordapp.com/attachments/429056808561278979/450412294078332948/download.jpg")
+               .setColor("RANDOM")
+               .addField('**●[اهلا بك]** ', `<@${men.id}>` , true)
+               .addField('**●[لقد تمت مصارحتك]**' ,       ` __${args}__ ` , true)
+               .addField('**●[تاريخ المصارحة]**' , Day + "-" + Month + "-" + Year , true)
+          client.users.get(men.id).sendEmbed(embed)
+          ro7.reply(`لقد تم ارسال الصراحه للشخص \n <@${men.id}>`)
+message.delete()
+          ro7.delete();
+})
+nnn.on("collect", r => {
+message.delete()
+ro7.reply("`تم الغاء الصراحة`")
+ro7.delete();
+})
+})
+})
+})
+}
+}
+});
 
 client.on('message', message => { // Designed by [ @RO7#9078 ]
 
