@@ -344,7 +344,7 @@ client.on('message', msg => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('.net', '.tk', '.com', '.gg', 'https://')){
+    if(message.content.includes('.net', '.tk', '.com','https://')){
         message.delete()
     return message.reply(`**حبي ممنوع نشر اي روابط:joy: ** <@477108070409830424> بند امه`)
     }
