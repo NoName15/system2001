@@ -14,7 +14,7 @@ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~Team #King Bot~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-console.log(`Logged in as  * [ "  Team #King Bot " ] servers! [ " ${client.guilds.size} " ] Users! [ " ${client.users.size} " ]`); 
+console.log(`Logged in as  * [ "  Legends Bot " ] servers! [ " ${client.guilds.size} " ] Users! [ " ${client.users.size} " ]`); 
 
 });
 
@@ -30,7 +30,7 @@ console.log(`Logged in as  * [ "  Team #King Bot " ] servers! [ " ${client.guild
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
-  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
+  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك تعال نسولف https://discord.gg/zYhHEce**`)
       guild.owner.send(embed)
 });
 
@@ -39,7 +39,7 @@ client.on('guildCreate', guild => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 100000 ;
-    var setGame = [`help Servers ${client.guilds.size} `,`invite Users ${client.users.size}`];
+    var setGame = [`Sreaming ليجندز يا حبيبي on ${client.guilds.size} `,`Users : ${client.users.size}`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -59,7 +59,7 @@ client.on('ready', function(){
    
 client.on('message', message => {
 if(message.content == (prefix + "admin bot")) {
-         if(!message.author.id === '314135031029170197') return;
+         if(!message.author.id === '480407581085532180') return;
 var gimg;
 var gname;
 var gmemb;
@@ -99,7 +99,7 @@ client.on("message", message => {
    
    
    
-           ***General Commands***
+           **General Commands**
    **
    『${prefix}id/ معلومات عن حسابك』
    『${prefix}2id / معلومات عن الحساب في صوره』
@@ -121,7 +121,7 @@ client.on("message", message => {
    『${prefix}short / اختصار الروابط』
    『${prefix}calculate / حاسبة』
    **
-           ***Administrative Commands***
+           **Administrative Commands**
    **
    『${prefix}color 50 /انشاء 50 لون』
    『${prefix}color 100/انشاء 100 لون』
@@ -142,7 +142,7 @@ client.on("message", message => {
    『${prefix}mb/ حاله الاعضاء』
    『${prefix}bot/ معلومات عن البوت』
    **
-           ***Games Commands***
+           **Games Commands**
     **       
    『${prefix}لعبه صراحه/صراحه』
    『${prefix}لعبه خواطر/خواطر 』
@@ -155,12 +155,12 @@ client.on("message", message => {
    『${prefix}للعب لعبه مريم/ مريم』
    『${prefix}يعطيك كلمات حب/ حب』
    **
-           ***profile Commands***
+           **profile Commands**
     
    『soon』
     
              _ _---------------- _ _
-  BOT By: | <@314135031029170197> |
+  BOT By: | <@480407581085532180> | جميع الحقوق محفوظة لسيرفر ليجندز يونايتد 2018
 
    **
 
@@ -174,7 +174,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
+  .addField("Done" , "تم ارسال المساعدة فالخاص :ballot_box_with_check: ")
   message.channel.sendEmbed(embed);
     }
 });
@@ -205,17 +205,17 @@ client.on('message' , message => {
         if (message.content.startsWith(prefix + "sug")) {
         if (!message.channel.guild) return;
         let args = message.content.split(" ").slice(1).join(" ");
-        client.channels.get("510738551193993237").send(
-            "\n" + "**" + " ● Suggested By : " + "**" +
+        client.channels.get("507987467664621589").send(
+            "\n" + "**" + " ● Suggested By : تم الاقتراح من قبل" + "**" +
             "\n" + "**" + "» " + message.author.tag + "**" +
-            "\n" + "**" + " ● Suggest : " + "**" +
+            "\n" + "**" + " ● Suggestion : الاقتراح" + "**" +
             "\n" + "**" + args + "**")
         
         let embed = new Discord.RichEmbed()
              .setAuthor(message.author.username, message.author.avatarURL)
-             .setDescription(' Suggested Sent')
+             .setDescription(' Suggestion Has Been Sent')
              .setThumbnail(message.author.avatarURL)
-             .setFooter("Adidas")
+             .setFooter("**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**")
         message.channel.send(embed);
 }
  });
@@ -235,7 +235,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "Plus Bot"
+          text: "**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -253,7 +253,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "King Bot"
+          text: "**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**"
         }
       }}).then(msg => {msg.delete(100000)});
                           }
@@ -273,6 +273,7 @@ client.on('message', message => {
                         .setColor('RANDOM')
                         .addField('**Time Taken:**',msg + " ms :signal_strength: ")
                         .addField('**WebSocket:**',api + " ms :signal_strength: ")
+			.setFooter("**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**")
          message.channel.send({embed:embed});
                         }
  });
@@ -388,22 +389,22 @@ if (command == "embed") {
     const dot = new Discord.Client();
 client.on('message', message => {
     
-    if (message.content === "King Bot") {
+    if (message.content === "ليجندز") {
         setInterval(function(){
-        message.edit('**T**')    
-        message.edit('**Te**')    
-        message.edit('**Tea**')
-        message.edit('**Team**')
-        message.edit('**Team K**')
-        message.edit('**Team Ki**')
-        message.edit('**Team Kin*')
-        message.edit('**Team King**')
-        message.edit('**Team King **')
-        message.edit('**Team King B**')
-        message.edit('**Team King Bo**')
-        message.edit('**Team King Bot**')
-        message.edit('**Team King Bot **')
-        message.edit('**Team King Bot ..**')
+        message.edit('**L**')    
+        message.edit('**Le**')    
+        message.edit('**Lege**')
+        message.edit('**Legen**')
+        message.edit('**Legend*')
+        message.edit('**Legends**')
+        message.edit('**Legends Un*')
+        message.edit('**Legends Unit**')
+        message.edit('**Legends Unite**')
+        message.edit('**Legends United**')
+        message.edit('**Legends United 2**')
+        message.edit('**Legends United 20**')
+        message.edit('**Legends United 201 **')
+        message.edit('**Legends United 2018 ..**')
         }, 1000)
     }
     
@@ -565,7 +566,7 @@ client.on('message' , message => {
  .setThumbnail(client.user.avatarURL)
  .setAuthor(message.author.username, message.author.avatarURL)
  .setTitle('Click Here To Invite The Bot')
- .setURL('https://discordapp.com/api/oauth2/authorize?client_id=510740006151651338&permissions=8&scope=bot')
+ .setURL('You Want To Invite Me? اسال واحد من الاونرز :)')
   message.channel.sendEmbed(embed);
    }
 });
@@ -610,11 +611,11 @@ client.on("message", message => {
 /*دخول البوت*/
 
 client.on("guildCreate", guild => {
-client.channels.get("510741089272070154").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+client.channels.get("514169970440011787").send(' ***  BOT  ***   **Joined**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
 });
 
 client.on("guildDelete", guild => {
-client.channels.get("510741089272070154").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+client.channels.get("514169970440011787").send(' ***  BOT  ***   **Left**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
 });
 
 /////////^mb
@@ -676,7 +677,7 @@ client.on("message", (message) => {
 client.on('message', message => {
   if (true) {
 if (message.content === (prefix + "support")) {
-     message.author.send('https://discord.gg/N99ecR7').catch(e => console.log(e.stack));
+     message.author.send('https://discord.gg/afJW32B').catch(e => console.log(e.stack));
     }
    } 
   });
@@ -686,7 +687,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
+  .addField("Done" , " تــــم ارســال الرابط في الخاص :champagne_glass: ")
 
 
 
@@ -1057,20 +1058,6 @@ const secreT = [
   console.log('[id] Send By: ' + message.author.username)
     }
 });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES///////////
-////ALPHA / ALPHA CODES / ALPHA CODES//////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES//////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES//////////
-///////////////////////////////////////////////////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES//////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////ALPHA / ALPHA CODES / ALPHA CODES///////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////ALPHA / ALPHA CODES / ALPHA CODES///////////////////////////
 
 /*حب*/
 
@@ -1447,38 +1434,38 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == 314135031029170197) return;
+  if (message.author.id == 480407581085532180) return;
 
 
 if (message.content.startsWith(prefix + 'pl')) {
-if (message.author.id !== '314135031029170197') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.author.id !== '480407581085532180') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
 } 
 
  
 if (message.content.startsWith(prefix + 'st')) {
-if (message.author.id !== '314135031029170197') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.author.id !== '480407581085532180') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 client.user.setGame(argresult, "http://twitch.tv/kokoseda");
     message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
 } else
 
 if (message.content.startsWith(prefix + 'setname')) {
-if (message.author.id !== '314135031029170197') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.author.id !== '480407581085532180') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
   return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
     
 if (message.content.startsWith(prefix + 'setavatar')) {
-if (message.author.id !== '314135031029170197') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.author.id !== '480407581085532180') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 client.user.setAvatar(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
 } else
 
 
 if (message.content.startsWith(prefix + 'wt')) {
-if (message.author.id !== '314135031029170197') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.author.id !== '480407581085532180') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setActivity(argresult, {type : 'watching'});
  message.channel.sendMessage(`**${argresult}** : تم تغيير الووتشينق الى`)
 }
@@ -1770,14 +1757,14 @@ client.on('message', message => {
 const code = '$';//prefix
  
 client.on('message',async message => {
-    if(message.content.startsWith(code + "buy")) {
+    if(message.content.startsWith(code + "تقديم1")) {
   if(!message.channel.guild) return message.reply('This Command For Servers Only !');
-    let jscodes = message.guild.channels.find(`name`, "orders");
+    let jscodes = message.guild.channels.find(`name`, "تقديم");
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بالطلبات");
       let filter = m => m.author.id === message.author.id;
       let thisMessage;
       let thisFalse;
-      message.channel.send(':pencil: **| هل تعجبك هذة الخدمة؟... :pencil2: **').then(msg => {
+      message.channel.send(':pencil: **| ما اسمك وعمرك وما هي قدراتك... :pencil2: **').then(msg => {
  
       message.channel.awaitMessages(filter, {
         max: 1,
@@ -1788,7 +1775,7 @@ client.on('message',async message => {
         collected.first().delete();
         thisMessage = collected.first().content;
         let boi;
-        msg.edit(':scroll: **| ما هو اسم المنتج الذي تريد شراءة؟... :pencil2: **').then(msg => {
+        msg.edit(':scroll: **| كيف يمكنك مساعدة الناس في السيرفر؟... :pencil2: **').then(msg => {
  
             message.channel.awaitMessages(filter, {
               max: 1,
@@ -1799,7 +1786,7 @@ client.on('message',async message => {
               collected.first().delete();
               boi = collected.first().content;
               let boi2;
-              msg.edit(':man_in_tuxedo: **| ماهو اسم البائع الذي تريد شراء منه؟... :pencil2: **').then(msg => {
+              msg.edit(':man_in_tuxedo: **| ما هو الاداري المفضل عندك؟... :pencil2: **').then(msg => {
  
                 message.channel.awaitMessages(filter, {
                   max: 1,
@@ -1809,7 +1796,7 @@ client.on('message',async message => {
                 .then(collected => {
                   collected.first().delete();
                 boi2 = collected.first().content;
-        msg.edit(':shield: **| [ هل انت متاكد من عملية الشراء؟  | [ نعم ] او [ لا**');
+        msg.edit(':shield: **| [ هل انت متاكد من ارسال هذا الطلب سيتم تسليط عقوبات قاسية على الل يهزرو  | [ نعم ] او [ لا**');
    message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
           max: 1,
           time: 90000,
@@ -1827,9 +1814,9 @@ client.on('message',async message => {
             collected.first().delete();
             jscodes.send(`@everyone | @here
            
-**المنتج**: ${boi}
-**اسم البائع**: ${boi2}
-**اسم المشتري**: ${message.author}`);
+**الاسم والعمر والقدرات**: ${boi}
+**امكانية مساعدة الناس**: ${boi2}
+**الاداري المفضل**: ${message.author}`);
           }
         }
     );
@@ -2163,7 +2150,7 @@ client.on('message', async rokz => {
 [${time}]
 [${lang}]`)
  
-              let rokzz = rokz.guild.channels.find("name","تقديمات")
+              let rokzz = rokz.guild.channels.find("name","رتبة-بائع")
  
               setTimeout(() => {
  
@@ -2205,11 +2192,11 @@ client.on('message',async message => {
  
 let mention = message.mentions.members.first();
  
-let Room = client.channels.get('511086512079634434');
+let Room = client.channels.get('512754784860897281');
  
 if(message.content.startsWith(prefix + "رفض")) {
  
-if(message.guild.id !== '314135031029170197') return;
+if(message.guild.id !== '505466837086240768') return;
  
  if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("**للأسف ليس لديك صلاحية**").then(msg => msg.delete(5000));
  
@@ -2232,11 +2219,11 @@ client.on('message',async message => {
  
 let mention = message.mentions.members.first();
  
-let Room = client.channels.get('511086512079634434');
+let Room = client.channels.get('512754784860897281');
  
 if(message.content.startsWith(prefix + "قبول")) {
  
-if(message.guild.id !== '314135031029170197') return;
+if(message.guild.id !== '505466837086240768') return;
  
  if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("**للأسف ليس لديك صلاحية**").then(msg => msg.delete(5000));
  
@@ -2275,11 +2262,11 @@ Room.send(`
     }});
     
  
-
+/*
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","Ks,"));
     });
-
+*/
 
 
 
