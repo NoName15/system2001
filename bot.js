@@ -2,10 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
 var prefix = "$";
-var dat = JSON.parse("{}");
-function forEachObject(obj, func) {
-    Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
-}
+
 
 
 client.on('ready',  () => {
@@ -34,26 +31,7 @@ client.on('guildCreate', guild => {
       guild.owner.send(embed)
 });
 
-/*بلاييق البوت*/
 
-client.on('ready', function(){
-    client.user.setStatus("dnd");
-    var ms = 100000 ;
-    var setGame = [`Sreaming ليجندز يا حبيبي on ${client.guilds.size} `,`Users : ${client.users.size}`];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`https://www.twitch.tv/kokoseda`);
-    }, ms);100000
-
-});
 
 /*سرفرات البوت*/
    
@@ -101,10 +79,9 @@ client.on("message", message => {
    
            **General Commands**
    **
-   『${prefix}id/ معلومات عن حسابك』
-   『${prefix}2id / معلومات عن الحساب في صوره』
+   
    『${prefix}embed/ يكرر كلامك بمبيد』
-   『${prefix}sug/ الإقتراحات』
+   
    『${prefix}roles/ يطلع الرتب』
    『${prefix}roles-n يعطيك الرتب بالترتيب』
    『${prefix}server/ معلومات عن السيرفر』
@@ -160,7 +137,7 @@ client.on("message", message => {
    『soon』
     
              _ _---------------- _ _
-  BOT By: | <@480407581085532180> | جميع الحقوق محفوظة لسيرفر ليجندز يونايتد 2018
+  BOT By: | <@480407581085532180> |  2018
 
    **
 
@@ -198,27 +175,7 @@ if (command == "zalgo") {
 
 });
 
-/*اقتراح*/
 
-client.on('message' , message => {
-        if (message.author.bot) return;
-        if (message.content.startsWith(prefix + "sug")) {
-        if (!message.channel.guild) return;
-        let args = message.content.split(" ").slice(1).join(" ");
-        client.channels.get("507987467664621589").send(
-            "\n" + "**" + " ● Suggested By : تم الاقتراح من قبل" + "**" +
-            "\n" + "**" + "» " + message.author.tag + "**" +
-            "\n" + "**" + " ● Suggestion : الاقتراح" + "**" +
-            "\n" + "**" + args + "**")
-        
-        let embed = new Discord.RichEmbed()
-             .setAuthor(message.author.username, message.author.avatarURL)
-             .setDescription(' Suggestion Has Been Sent')
-             .setThumbnail(message.author.avatarURL)
-             .setFooter("**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**")
-        message.channel.send(embed);
-}
- });
 
 /*مسح*/
 
@@ -235,7 +192,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**"
+          text: "**All Rights Reserved To !  :ballot_box_with_check: 2018**"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -253,7 +210,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**"
+          text: "**All Rights Reserved To ! :ballot_box_with_check: 2018**"
         }
       }}).then(msg => {msg.delete(100000)});
                           }
@@ -273,7 +230,7 @@ client.on('message', message => {
                         .setColor('RANDOM')
                         .addField('**Time Taken:**',msg + " ms :signal_strength: ")
                         .addField('**WebSocket:**',api + " ms :signal_strength: ")
-			.setFooter("**All Rights Reserved To ! Legends United :ballot_box_with_check: 2018**")
+			.setFooter("**All Rights Reserved To !  :ballot_box_with_check: 2018**")
          message.channel.send({embed:embed});
                         }
  });
@@ -546,30 +503,8 @@ client.on('message', function(msg) {
 
 /*دعوت البوت*/
 
-client.on('message' , message => {
-    if (message.content === (prefix + "invite")) {
-        if(!message.channel.guild) return message.reply('This Command is Only For Servers');
-     const embed = new Discord.RichEmbed()
- .setColor("RANDOM")
- .setThumbnail(client.user.avatarURL)
- .setAuthor(message.author.username, message.author.avatarURL)
- .setTitle('Click Here To Invite The Bot')
- .setURL('https://discordapp.com/api/oauth2/authorize?client_id=510740006151651338&permissions=8&scope=bot')
-  message.channel.sendEmbed(embed);
-   }
-});
-client.on('message' , message => {
-    if (message.content === (prefix + "inv")) {
-        if(!message.channel.guild) return message.reply('This Command is Only For Servers');
-     const embed = new Discord.RichEmbed()
- .setColor("RANDOM")
- .setThumbnail(client.user.avatarURL)
- .setAuthor(message.author.username, message.author.avatarURL)
- .setTitle('Click Here To Invite The Bot')
- .setURL('You Want To Invite Me? اسال واحد من الاونرز :)')
-  message.channel.sendEmbed(embed);
-   }
-});
+
+
 
 /*افتار*/
 
@@ -674,26 +609,7 @@ client.on("message", (message) => {
 
 /*سورت*/
 
-client.on('message', message => {
-  if (true) {
-if (message.content === (prefix + "support")) {
-     message.author.send('https://discord.gg/afJW32B').catch(e => console.log(e.stack));
-    }
-   } 
-  });
-  
-client.on('message', message => {
-     if (message.content === (prefix + "support")) {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســال الرابط في الخاص :champagne_glass: ")
 
-
-
-  message.channel.sendEmbed(embed);
-    }
-});
 
 /*عمل اللوان*/
 
@@ -1183,13 +1099,6 @@ ctx.stroke();
 message.channel.sendFile(canvas.toBuffer());
 }
 })
-client.on('ready', () => {
-
-
-
-
- 
-});
 
 
 /*
@@ -1639,53 +1548,6 @@ ${prefix}role humans اسم الرتبة
 
 /*translate*/
    
-const translate = require('google-translate-api');
-const Langs = ['afrikaans', 'albanian', 'amharic', 'arabic', 'armenian', 'azerbaijani', 'bangla', 'basque', 'belarusian', 'bengali', 'bosnian', 'bulgarian', 'burmese', 'catalan', 'cebuano', 'chichewa', 'chinese simplified', 'chinese traditional', 'corsican', 'croatian', 'czech', 'danish', 'dutch', 'english', 'esperanto', 'estonian', 'filipino', 'finnish', 'french', 'frisian', 'galician', 'georgian', 'german', 'greek', 'gujarati', 'haitian creole', 'hausa', 'hawaiian', 'hebrew', 'hindi', 'hmong', 'hungarian', 'icelandic', 'igbo', 'indonesian', 'irish', 'italian', 'japanese', 'javanese', 'kannada', 'kazakh', 'khmer', 'korean', 'kurdish (kurmanji)', 'kyrgyz', 'lao', 'latin', 'latvian', 'lithuanian', 'luxembourgish', 'macedonian', 'malagasy', 'malay', 'malayalam', 'maltese', 'maori', 'marathi', 'mongolian', 'myanmar (burmese)', 'nepali', 'norwegian', 'nyanja', 'pashto', 'persian', 'polish', 'portugese', 'punjabi', 'romanian', 'russian', 'samoan', 'scottish gaelic', 'serbian', 'sesotho', 'shona', 'sindhi', 'sinhala', 'slovak', 'slovenian', 'somali', 'spanish', 'sundanese', 'swahili', 'swedish', 'tajik', 'tamil', 'telugu', 'thai', 'turkish', 'ukrainian', 'urdu', 'uzbek', 'vietnamese', 'welsh', 'xhosa', 'yiddish', 'yoruba', 'zulu'];
-
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'translate')) {
-    let args = message.content.split(" ").slice(1);
-    if (!args[0]) {
-    
-        const embed = new Discord.RichEmbed()
-            .setColor("FFFFFF")
-            .setDescription("**ترجمة الكتابة.**\استعمل: `+translate <الكمة لتبي> <االغة>`");
-
-        return message.channel.send(embed);
-
-    } else {
-
-        if (args.length === undefined) {
-
-            return message.channel.send("**ترجمة الكتابة.**\استعمل: `+translate <الكمة لتبي> <االغة>`");
-
-        } else {
-
-            let transArg = args[0].toLowerCase();
-
-            args = args.join(' ').slice(1)
-            let translation;
-
-            if (!Langs.includes(transArg)) return message.channel.send(`**Language not found.**`);
-            args = args.slice(transArg.length);
-
-            translate(args, {
-                to: transArg
-            }).then(res => {
-
-                const embed = new Discord.RichEmbed()
-                    .setAuthor("Translator", client.user.displayAvatarURL)
-                    .addField(`Input`, `\`\`\`${args}\`\`\``)
-                    .setColor("#42f4c8")
-                    .addField(`Output`, `\`\`\`${res.text}\`\`\``);
-                return message.channel.send(embed);
-            });
-        }
-    }
-}
-});
-
-/*tag*/
 
 
 const figlet = require('figlet');
@@ -1757,7 +1619,7 @@ client.on('message', message => {
 const code = '$';//prefix
  
 client.on('message',async message => {
-    if(message.content.startsWith(code + "تقديم1")) {
+    if(message.content.startsWith(code + "تقديم")) {
   if(!message.channel.guild) return message.reply('This Command For Servers Only !');
     let jscodes = message.guild.channels.find(`name`, "تقديم");
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بالطلبات");
@@ -1863,7 +1725,7 @@ client.on('message', msg => {
 
 client.on('message', message => {
 
-    if (message.content === "+mutechannel") {
+    if (message.content === "$mutechannel") {
                         if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
